@@ -29,8 +29,8 @@ if __name__ == "__main__":
 		gpt_ver = input("ver?(gpt-3.5-turbo/gpt-4):")
 		gpt_a = ChatGPT(gpt_ver, role)
 		now = datetime.datetime.now()
-		datetime = now.strftime("%Y%m%d%H%M%S")
-		file_name = datetime+".pkl"
+		str_datetime = now.strftime("%Y%m%d%H%M%S")
+		file_name = str_datetime+".pkl"
 	else:
 		file_name = input("pickle name?:")
 		with open(file_name, "rb") as file:
